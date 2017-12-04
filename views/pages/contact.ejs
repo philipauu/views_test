@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+
+        <% include ../partials/jumbotron %>
+
+
+            <table class="table">
+                <thead class="thead-default">
+                    <tr>
+                        <th>Contacts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <% address.forEach(function(address) { %>
+                            <td>
+                                <%= address.name %>
+                            </td>
+                            <td>
+                                <%= address.number %>
+                            </td>
+                            <td>
+                                <%= address.email %>
+                            </td>
+
+                    </tr>
+
+                    <% }); %>
+                </tbody>
+            </table>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+
+</html>

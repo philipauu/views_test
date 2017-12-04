@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+
+        <% include ../partials/jumbotron %>
+
+            <h2>Variable</h2>
+
+            <p>
+                <%= tagline %>
+            </p>
+
+            <h2>Loop</h2>
+
+            <table class="table">
+                <thead class="thead-default">
+                    <tr>
+                        <th>Drinks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <% drinks.forEach(function(drink) { %>
+                            <td>
+                                <%= drink.name %> -
+                                    <%= drink.drunkness %>
+                            </td>
+                    </tr>
+
+                    <% }); %>
+                </tbody>
+            </table>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+
+</html>
